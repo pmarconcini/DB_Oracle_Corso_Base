@@ -3,21 +3,18 @@
 -----------------------------------
 ## 1. Note introduttive
 
-1.01	Note introduttive
+1.10 [Note introduttive](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/110_note_introduttive.md)
+- Audience
+- Software utilizzati
 
+1.20 [Risorse documentali] TBD
 
-Audience	13
-Software utilizzato	13
-Oracle XE DB [Oracle DB Express Edition (XE) Release 18.4.0.0.0 (18c)]	13
-Oracle SQL Developer 19.4	13
-Software alternativi e/o integrativi	13
-APEX [Oracle APEX Release 19.2.0.00.18]	13
-Toad for Oracle Freeware	13
-Riferimenti documentali	13
-Premessa	14
-Convenzioni	14
-2.	Concetti generali e RDBMS	16
-Concetti introduttivi e convenzioni	16
+1.30 [Premesse e convenzioni] TBD
+
+-----------------------------------
+## 2. Concetti generali e RDBMS
+
+2.10 [Concetti introduttivi e convenzioni]	16
 Definizioni e acronimi	16
 Architettura, utenti/schema e ruoli/permessi	16
 Modello relazionale, referenzialità, vincoli e tipi di dato	18
