@@ -9,7 +9,7 @@
 
 1.20 [Risorse documentali](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/120_risorse_documentali)
 
-1.30 [Premesse e convenzioni] TBD
+1.30 [Premesse e convenzioni](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/130_premesse_e_convenzioni.md) 
 
 -----------------------------------
 ## 2. Concetti generali e RDBMS
