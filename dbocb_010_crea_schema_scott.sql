@@ -32,7 +32,7 @@ GRANT UNLIMITED TABLESPACE TO scott;
 -- --------------------------------------
 connect scott/tiger
 
-START dbocb_010_crea_oggetti_scott.sql
+START dbocb_020_crea_oggetti_scott.sql
 
 -- --------------------------------------
 connect scott/tiger
