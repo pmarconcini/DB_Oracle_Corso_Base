@@ -16,14 +16,10 @@
 
 2.10 [Concetti introduttivi e architettura](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/210_concetti_introduttivi_e_architettura.md)
 
+2.20 [Modello relazionale, referenzialità, vincoli e tipi di dato](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/220_modello_relazionale_referenzialita_vincoli_tipi.md)
 
-Modello relazionale, referenzialità, vincoli e tipi di dato	18
-Modello relazionale	18
-Integrità referenziale (Vincoli interrelazionali o extrarelazionali)	18
-Vincoli di tabella o intrarelazionali	18
-Vincoli di tupla o record	19
-Tipi di dato	19
-Commenti, identificazione del testo e concatenamento	20
+
+
 3.	Download e installazione del software	21
 Installare Oracle Express	21
 Strumenti di Oracle Express Edition	24
