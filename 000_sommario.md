@@ -19,7 +19,7 @@
 2.20 [Modello relazionale, referenzialità, vincoli e tipi di dato](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/220_modello_relazionale_referenzialita_vincoli_tipi.md)
 
 -----------------------------------
-## 3.	Download e installazione del software
+## 3.	Installazione del software e utilizzo degli strumenti
 
 3.10 [Installare Oracle Express](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/310_installare_oracle_express.md)
 
