@@ -6,6 +6,7 @@
 -----------------------------------
 ## CONCETTI INTRODUTTIVI E ARCHITETTURA
 
+-----------------------------------
 ### DEFINIZIONI E ACRONIMI
 * RDBMS: Relational Database Management System, sistema di gestione di database relazionali.
 * ERD: Entity Relationship Diagram, è una tecnica di rappresentazione grafica delle informazioni relative alle entità dell’architettura e delle relazioni tra le stesse.
@@ -18,7 +19,8 @@
 * DCL: Data Control Language, è il linguaggio che comprende l’insieme delle istruzioni necessarie alla gestione della capacità operativa.
 * TCL: Transaction Control Language, è il linguaggio che comprende l’insieme delle istruzioni necessarie alla gestione delle transazioni.
 
-ARCHITETTURA, UTENTI/SCHEMA E RUOLI/PERMESSI
+-----------------------------------
+## ARCHITETTURA, UTENTI/SCHEMA E RUOLI/PERMESSI
 * Un server Oracle è costituito da due tipologie di strutture, il database e l’istanza. Il database è costituito dai file fisici in cui sono memorizzati i dati mentre l’istanza è l’insieme delle aree di memoria e dei processi di background necessari ad accedere ai dati.     
 * I dati del database risiedono in Tablespace, contenitori logici a cui sono associati uno o più file fisici.
 * Ogni database è multi-utente, ovvero più utenti possono collegarsi contemporaneamente al database.
