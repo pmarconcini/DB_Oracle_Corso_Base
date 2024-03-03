@@ -48,9 +48,12 @@
 * Oltre ai privilegi sugli oggetti (specifici per il singolo oggetto) esistono i privilegi di sistema (trasversali rispetto agli Schema e relativi a singole tipologie di oggetti); dai privilegi di sistema (che possono essere concessi solo da utenti amministratori) derivano gerarchicamente i privilegi sugli oggetti.
 * Tutti gli utenti sono automaticamente associati al ruolo PUBLIC, quindi garantire un privilegio a tale ruolo significa garantirlo a tutti gli utenti del database.
 
+
 Per una più completa trattazione dei privilegi si rimanda alla documentazione ufficiale di Oracle
 
+
 Per una più completa trattazione dell’architettura di Oracle si rimanda ai seguenti link:
+
 https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/
 
 
