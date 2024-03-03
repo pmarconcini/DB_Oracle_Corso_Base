@@ -4,7 +4,7 @@
 
 
 -----------------------------------
-## CONCETTI INTRODUTTIVI E CONVENZIONI
+## CONCETTI INTRODUTTIVI E ARCHITETTURA
 
 ### DEFINIZIONI E ACRONIMI
 * RDBMS: Relational Database Management System, sistema di gestione di database relazionali.
