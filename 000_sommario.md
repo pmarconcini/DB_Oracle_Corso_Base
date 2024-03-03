@@ -14,9 +14,9 @@
 -----------------------------------
 ## 2. Concetti generali e RDBMS
 
-2.10 [Concetti introduttivi e convenzioni]	16
-Definizioni e acronimi	16
-Architettura, utenti/schema e ruoli/permessi	16
+2.10 [Concetti introduttivi e architettura](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/210_concetti_introduttivi_e_architettura.md)
+
+
 Modello relazionale, referenzialità, vincoli e tipi di dato	18
 Modello relazionale	18
 Integrità referenziale (Vincoli interrelazionali o extrarelazionali)	18
