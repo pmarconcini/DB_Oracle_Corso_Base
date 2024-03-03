@@ -7,7 +7,7 @@
 - Audience
 - Software utilizzati
 
-1.20 [Risorse documentali] TBD
+1.20 [Risorse documentali](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/120_risorse_documentali)
 
 1.30 [Premesse e convenzioni] TBD
 
