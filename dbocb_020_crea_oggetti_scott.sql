@@ -1,3 +1,7 @@
+-- --------------------------------------
+connect scott/tiger
+
+
 begin
     execute immediate 'DROP TABLE SALE CASCADE CONSTRAINTS';
 exception
@@ -282,3 +286,27 @@ BEGIN
 	Commit;
 END; 
 /
+
+
+GRANT SELECT ON prova TO scott_app WITH GRANT OPTION;
+
+GRANT EXECUTE ON pr_prova_ins TO scott_app;
+
+connect scott_app/app
+
+GRANT SELECT ON scott.prova TO scott_ro;
+
+connect sys/manager as sysdba
+
+GRANT ALL ON scott.prova TO scott_ro;
+
+-- --------------------------------------
+connect scott_app/app
+
+insert into scott.prova values (1, 'AAA', sysdate);
+
+execute scott.pr_prova_ins (2);
+
+select * from scott.prova;
+
+-- --------------------------------------
