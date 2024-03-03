@@ -21,7 +21,7 @@
 -----------------------------------
 ## 3.	Download e installazione del software
 
-3.10 [Installare Oracle Express](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/310_installare_oracleexpress.md)
+3.10 [Installare Oracle Express](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/310_installare_oracle_express.md)
 
 3.20 
 Strumenti di Oracle Express Edition
