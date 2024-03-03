@@ -1,21 +1,25 @@
 # Note introduttive
 
 -----------------------------------
-## 1. Note introduttive
-
-1.01	Note introduttive
-
-
-AUDIENCE
+## AUDIENCE
 I contenuti sono rivolti a un pubblico con competenze informatiche tecniche di base, non necessariamente con esperienza in ambito base dati.
 
-SOFTWARE UTILIZZATO
-ORACLE XE DB [ORACLE DB EXPRESS EDITION (XE) RELEASE 18.4.0.0.0 (18C)]
-Il software è scaricabile dal sito della Oracle, previa autenticazione gratuita.
-http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html
+-----------------------------------
+## SOFTWARE UTILIZZATO
 
-ORACLE SQL DEVELOPER 19.4
+-----------------------------------
+### ORACLE XE DB
 Il software è scaricabile dal sito della Oracle, previa autenticazione gratuita.
+
+https://www.oracle.com/database/technologies/appdev/xe.html
+
+La versione di riferimento per contenuti e immagini è "Oracle Database 21c Express Edition for Windows x64".
+
+
+-----------------------------------
+### ORACLE SQL DEVELOPER 
+Il software è scaricabile dal sito della Oracle, previa autenticazione gratuita.
+
 https://www.oracle.com/tools/downloads/sqldev-downloads.html
 
 SOFTWARE ALTERNATIVI E/O INTEGRATIVI
