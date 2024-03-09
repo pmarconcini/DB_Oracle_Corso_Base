@@ -114,7 +114,7 @@ Tramite l’istruzione EXECUTE (EXEC nella forma breve) è possibile eseguire un
 
 *	SHOW: Permette di visualizzare varie informazioni. 
   * SHOW ERRORS ==> restituisce informazioni relative ad eventuali errori dell’ultima compilazione di un oggetto
-  * SHOW ERRORS <tipo oggetto>  <nome oggetto>  restituisce informazioni relative ad eventuali errori di compilazione dello specifico oggetto
+  * SHOW ERRORS <tipo oggetto>  <nome oggetto> ==> restituisce informazioni relative ad eventuali errori di compilazione dello specifico oggetto
 
  ![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/fbd4461d-553b-45f5-b169-7a7c999a5d03)
 
