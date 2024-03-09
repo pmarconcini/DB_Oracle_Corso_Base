@@ -25,9 +25,9 @@
 
 3.20 [Strumenti di Oracle Express Edition](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/320_strumenti_oracle_express.md)
 
-3.30 [SQL Plus]()
+3.30 [SQL Plus](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/330_sql_plus.md)
 
-3.40 Import / Export
+3.40 [Import / Export](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/340_import_export.md)
 
 3.50
 Loader
