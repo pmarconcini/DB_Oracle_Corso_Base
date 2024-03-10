@@ -42,13 +42,13 @@
 -----------------------------------
 ## 4.	SQL - Data Query Language (DML di interrogazione)
 
-4.10 [DQL - Interrogazione: SELECT e FROM](410_sql_dql_select_from.md)
+4.10 [DQL - Interrogazione: SELECT e FROM](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/410_sql_dql_select_from.md)
 
-4.20 [DQL - Interrogazione: Funzioni single-row](420_sql_dql_funzioni_single_row.md)
+4.20 [DQL - Interrogazione: Funzioni single-row](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/420_sql_dql_funzioni_single_row.md)
   
-4.30 [DQL - Interrogazione: WHERE e ORDER BY](430_sql_dql_where_e_order_by.md)
+4.30 [DQL - Interrogazione: WHERE e ORDER BY](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/430_sql_dql_where_e_order_by.md)
   
-4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](440_sql_dql_having_group_by.md)
+4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/440_sql_dql_having_group_by.md)
 
 4.50 DQL - Interrogazione: Joins
   Simple join
