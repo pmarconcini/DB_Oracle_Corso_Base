@@ -46,10 +46,8 @@
 
 4.20 [DQL - Interrogazione: Funzioni single-row](420_sql_dql_funzioni_single_row.md)
   
-4.30 DQL - Interrogazione: WHERE e ORDER BY
-  Uso delle espressioni regolari
-  Clausola di limitazione delle righe
-
+4.30 [DQL - Interrogazione: WHERE e ORDER BY](430_sql_dql_where_e_order_by.md)
+  
 4.40 DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate
 
 4.50 DQL - Interrogazione: Joins
