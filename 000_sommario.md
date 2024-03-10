@@ -50,12 +50,7 @@
   
 4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/440_sql_dql_having_group_by.md)
 
-4.50 DQL - Interrogazione: Joins
-  Simple join
-  Natural join
-  Left o right outer join
-  Self join
-  Prodotto cartesiano
+4.50 [DQL - Interrogazione: Joins](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/450_sql_dql_joins.md)
 
 4.60 DQL - Interrogazione: Pseudocolonne e oggetti sistema
   Descrizione degli oggetti
