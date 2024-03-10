@@ -215,9 +215,13 @@
     
 
 -----------------------------------
-
+## 4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](440_sql_dql_having_group_by.md)
 
     
+
+
+
+-----------------------------------
 
 
 -----------------------------------
