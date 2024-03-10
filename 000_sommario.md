@@ -44,11 +44,8 @@
 
 4.10 [DQL - Interrogazione: SELECT e FROM](410_sql_dql_select_from.md)
 
-4.20 DQL - Interrogazione: Funzioni single-row
-  Funzioni numeriche
-  Funzioni testuali
-  Funzioni per le date
-  Funzioni varie (comparazione, conversione e altro)
+4.20 [DQL - Interrogazione: Funzioni single-row](420_sql_dql_funzioni_single_row.md)
+  
 4.30 DQL - Interrogazione: WHERE e ORDER BY
   Uso delle espressioni regolari
   Clausola di limitazione delle righe
