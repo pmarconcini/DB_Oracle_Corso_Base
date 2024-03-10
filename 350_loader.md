@@ -33,6 +33,16 @@ NB: l'intestazione potrebbe essere assente o occupare più righe, l'identificato
 
 -----------------------------------
 
+Output generato da elaborazione e verifica:
+
+![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/16a7a3e6-5bab-4a31-b6da-dc8d7861660a)
+
+![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/1d38d661-9dec-4bed-a06e-11ab62944bbe)
+
+
+
+-----------------------------------
+
 Esempio di file di controllo [dbocb_350_csv.ctl](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/dbocb_350_csv.ctl):
 
     OPTIONS (errors = 1, skip=1)
@@ -77,6 +87,15 @@ Esempio di file di controllo [dbocb_350_txt.ctl](https://github.com/pmarconcini/
     )
 
 NB: l'intestazione potrebbe essere assente o occupare più righe, non è presente l'identificatore di valore, non è presente il separatore perchè ogni campo ha una dimensione definita e il formato della data potrebbe essere diverso, in conformità delle scelte applicate dal fornitore del file
+
+-----------------------------------
+
+Output generato da elaborazione e verifica:
+
+![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/47a10645-b4ff-4f80-9248-1b8f9bf80136)
+
+![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/4f3df68b-e3f5-4d00-b2e3-18293de4bf86)
+
 
 -----------------------------------
 
