@@ -139,6 +139,84 @@
 -----------------------------------
 ## 4.30 [DQL - Interrogazione: WHERE e ORDER BY](430_sql_dql_where_e_order_by.md)
 
+    SELECT i.ename, i.deptno, i.sal, i.comm, i.sal * 12 + nvl(i.comm, 0) annuo, 
+    i.mgr, i.hiredate, d.loc
+    FROM emp i, dept d
+    WHERE i.deptno = d.deptno                 --condizione di JOIN
+    	AND (                   --l'uso delle parentesi rende alternative le coppie 
+                             --di condizioni seguenti
+    	d.LOC = 'DALLAS' AND i.sal > 1000
+    	OR
+    	d.LOC LIKE '%O%' AND i.sal > 1250 --LIKE confronta testi con caratteri 
+                                       -- jolly % e _
+    	)
+    	AND mgr IS NOT NULL       --verifica del NULLO (alternativa è la scrittura 
+                               --NVL(mgr, 0) = 0 per esempio
+    	AND i.sal + NVL(i.comm, 0) BETWEEN 1000 AND 3000--BETWEEN permette di 
+                     --verificare l'appartenenza di un valore rispetto a un range
+    	AND i.hiredate >= TO_DATE('01071981', 'ddmmyyyy') --è necessario convertire 
+                                                       -- in data
+    ORDER BY annuo desc,         --riferimento all'alias di colonna
+    	1, --prima colonna della SELECT in ordine crescente (anche senza ASC)
+    	i.empno NULLS FIRST; --campo non usato in SELECT con NULLI prima
+
+-----------------------------------
+
+    SELECT ename,
+    REGEXP_REPLACE (ename, '([aeiou])','1', 1, 1, 'i') F1,
+    	--sostituzione della prima occorrenza di una vocale con 1
+    	REGEXP_INSTR (ename, '[a-c]', 1, 2, 0, 'i') F2,
+    –-ricerca della posizi. della seconda occorrenza di una lettera tra a, b e c
+    	REGEXP_INSTR ('ABCD1234efgh', '([[:lower:]])', 1, 2, 0, 'c') F3, 
+    --ricerca la posiz. della seconda occorrenza di un caratt. Alfab. minuscolo
+    	REGEXP_SUBSTR('..Z-ABCD12-34567YYY', '([[:alnum:]]){3,4}', 1, 2) F4, 	 
+    --ricerca considerando solo gli alfanumerici
+    	REGEXP_SUBSTR('Testo1, Testo2, Testo3', '[^,]+', 1, 2, 'i') F5 	 
+    --selezione del testo
+    FROM emp
+    --WHERE REGEXP_LIKE (ename, 'AR')             --corrispondente a like %AR%
+    --WHERE REGEXP_LIKE (ename, 'N$')             --che termina con il testo
+    --WHERE REGEXP_LIKE (ename, '^K')             --che inizia con il testo
+    --WHERE REGEXP_LIKE (ename, '(AN|EN|IN|ON)')  
+    --che contiente uno dei valori alternativi
+    --WHERE REGEXP_LIKE (ename, '[AEIOU]N')       
+    --che contiente uno dei valori alternativi seguito da N
+    --WHERE REGEXP_LIKE (ename, '([cln])\1', 'i') 
+    --che contiente uno doppia C/N/L, non case sensitive
+    --WHERE REGEXP_LIKE (ename, '[cln]{2}', 'i')  
+    --che contiente uno doppia C/N/L, non case sensitive
+    WHERE REGEXP_LIKE (ename, '[AE]')
+    ;
+
+-----------------------------------
+
+    SELECT ename, sal
+    FROM   emp
+    ORDER BY sal DESC
+    --FETCH FIRST 11 ROWS ONLY --prime 11 righe
+    --FETCH FIRST 2 ROWS WITH TIES --prime 2 righe più eventuali pareggi
+    --FETCH FIRST 20 PERCENT ROWS ONLY; --primo 20% dei record
+    --OFFSET 4 ROWS FETCH NEXT 5 ROWS ONLY; --dopo i primi 4 record, 5 record
+    ;
+
+-----------------------------------
+
+    SELECT x2.*
+    FROM (
+        SELECT ROWNUM ord, x1.*
+        FROM (
+                SELECT rownum n, ename, sal
+                FROM   emp
+                ORDER BY sal DESC
+               ) x1
+        ) x2
+    WHERE ord > 7
+    ;
+    
+
+-----------------------------------
+
+
     
 
 
