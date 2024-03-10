@@ -31,26 +31,17 @@
 
 3.50 [Loader](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/350_loader.md)
 
+3.60 [Oracle SQL Developer](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/360_sql_developer.md)
 
-3.60
-Installare Oracle SQL Developer
-Strumenti di Oracle SQL Developer
-Aggiungere e utilizzare una connessione dati
-Funzioni e strumenti del foglio di lavoro SQL
+3.70 Installare Oracle APEX (DA FARE)
 
-3.70
-Installare Oracle APEX (DA VERIFICARE/AGGIORNARE)
+3.80 Gestione di un workspace APEX (DA FARE)
 
-3.80
-Creazione di un workspace APEX (DA VERIFICARE/AGGIORNARE)
-Gestione Workspace INTERNAL (DA VERIFICARE/AGGIORNARE)
+3.90 Oracle APEX Online (DA FARE)
 
-3.90
-Oracle APEX Online (DA VERIFICARE/AGGIORNARE)
-
-
-
-4.	SQL – DML di interrogazione (DQL)
+-----------------------------------
+## 4.	SQL
+DML di interrogazione (DQL)
 DML - Interrogazione: SELECT e FROM
   Formato di visualizzazione
 DML - Interrogazione: Funzioni single-row
