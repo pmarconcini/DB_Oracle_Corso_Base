@@ -38,6 +38,28 @@ Output:
 
 -----------------------------------
 
+## FORMATO DI VISUALIZZAZIONE
+
+Oracle ha delle formattazioni predefinite per quanto riguarda alcuni tipi di dato, ma è possibile impostarne una diversa per la sessione attraverso, per esempio, le seguenti istruzioni (che valgono per SQL Plus e SQL Developer, mentre non è detto per altri client non “garantiti” dalla Oracle stessa):
+
+* ALTER SESSION SET NLS_DATE_FORMAT='dd/mm/yyyy hh24:mi:ss'; ==> per impostare la formattazione a video delle date
+* ALTER SESSION SET NLS_LANGUAGE ='english'; ==> per impostare la lingua nei riferimenti temporali (giorno della settimana e mese)
+* ALTER SESSION SET NLS_TERRITORY='ITALY'; ==> per impostare la territorialità (per esempio per l’identificazione del primo giorno della settimana)
+* ALTER SESSION SET NLS_NUMERIC_CHARACTERS = ', '; ==> per impostare il carattere di separazione dei decimali e delle migliaia (questo secondo solo nell’utilizzo della funzione di conversione TO_CHAR)
+
+Esempio:
+
+    ALTER SESSION SET NLS_DATE_FORMAT='dd/mm/yyyy hh24:mi:ss';
+    ALTER SESSION SET NLS_NUMERIC_CHARACTERS = ', ';
+    SELECT sysdate Oggi, 12345.9 numero, TO_CHAR(12345.9,'999G999D99') formattato FROM DUAL;
+
+Output:
+
+![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/35a6ecb3-27af-45b0-986e-3deae61e256b)
+
+
+-----------------------------------
+
 NB: per una trattazione completa si rimanda alla documentazione ufficiale
 
 -----------------------------------
