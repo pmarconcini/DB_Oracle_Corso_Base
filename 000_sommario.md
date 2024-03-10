@@ -29,8 +29,8 @@
 
 3.40 [Import / Export](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/340_import_export.md)
 
-3.50
-Loader
+3.50 [Loader](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/350_loader.md)
+
 
 3.60
 Installare Oracle SQL Developer
