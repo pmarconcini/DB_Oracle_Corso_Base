@@ -67,6 +67,80 @@
     FROM emp i
     WHERE ename= 'KING';
 
+-----------------------------------
+
+    SELECT i.ename,
+    	ASCII(i.ename) F1,        --codice ascii del primo carattere del testo
+    	INSTR(i.ename, 'N') F2,  --posizione della prima occorrenza di N nel testo.
+    	INSTR(i.ename, 'Q') F3,    --0 in assenza di occorrenze di Q nel testo.
+    	INSTR('CANNONE', 'N', 5) F4,--posizione della prima occorrenza di N nel
+                                -- testo a partire dal byte 5
+    	INSTR('CANNONE', 'N', 1, 2) F5, --posizione della seconda occorrenza di N 
+                                  --nel testo a partire dal byte 1
+    	INSTR('CANNONE', 'N', -1) F6,--posiz. dell'ultima occorrenza di N nel testo
+    	LENGTH(i.ename) F7        --lunghezza del testo
+    FROM emp i
+    WHERE ename= 'KING';
+
+-----------------------------------
+
+    SELECT i.hiredate,
+        ADD_MONTHS(i.hiredate, -2) F1, --addizione o sottrazione del numero di mesi
+        CURRENT_DATE F2,         --data corrente della sessione di Oracle
+        CURRENT_TIMESTAMP F3,     --timestamp corrente della sessione di Oracle
+        LAST_DAY(i.hiredate) F4,   --ultimo giorno del mese
+        LOCALTIMESTAMP F5,         --timestamp locale
+        MONTHS_BETWEEN(i.hiredate, sysdate) F6,    --numero di mesi tra due date
+        ROUND(i.hiredate) F7,        --arrotondamento della data
+        ROUND(i.hiredate + 0.6) F8, --arrotondamento della data
+        SYSDATE F9,                --data di sistema
+        SYSTIMESTAMP F10,         --timestamp di sistema
+        TO_CHAR(i.hiredate, 'DD/MM/RRRR HH24:MI:SS/ssss') F11,--format in testo
+        TO_CHAR(i.hiredate, 'DAY D MONTH RR') F12,    --formattazione in testo
+        TRUNC(i.hiredate) F13,        --troncamento della data
+        EXTRACT(YEAR FROM i.hiredate) F14, --Estrazione dell'anno
+        EXTRACT(MONTH FROM i.hiredate) F15, --Estrazione del mese
+        EXTRACT(DAY FROM i.hiredate) F16 --Estrazione del giorno
+    FROM emp i
+    WHERE ename = 'KING';
+
+-----------------------------------
+
+    SELECT i.sal,
+    	i.comm,
+    	i.job,
+    	NVL(i.comm, 1000) F1,                 --Sostituzione del nullo
+    	GREATEST(NVL(i.comm, 1000), i.sal, 500) F2,     --il maggiore
+    	LEAST(NVL(i.comm, 1000), i.sal, 500) F3,         --il minore
+    	DECODE(i.job, 'PRESIDENT', 'CAPO', 'MANAGER', 'CAPETTO', 'SCHIAVO') F4,
+    	--(deprecata) dato il primo parametro, verifiche per
+    	-- uguaglianza (test|valore) con elemento finale jolly facoltativo
+    	CASE i.job WHEN 'PRESIDENT' THEN 'CAPO' WHEN 'MANAGER' THEN 'CAPETTO' 
+      ELSE 'SCHIAVO' END F5,            --scrittura analoga alla DECODE
+    	CASE WHEN i.sal > 2000 THEN 'RICCO' ELSE 'POVERO' END F6,
+    	--CASE con espressione di verifica
+    	TO_DATE ('27092016', 'DDMMYYYY') F7,         --conversione in data
+    	TO_NUMBER('02,780') F8,
+    --conversione in numero (il carattere predefinito 
+    -- per i decimali è il punto, ma dipende dalla configurazione del database)
+    – formattare aggiungendo , '999999D99999', 'NLS_NUMERIC_CHARACTERS = '',.''')
+    	TO_CHAR (i.sal, 'U99G999D99MI') F9,         --formattazione dei numeri
+    	COALESCE(i.comm, NULL, NULL, 1000) F10,     --Sostituzione del nullo 
+                                          -- fino al primo non nullo dell'elenco
+    	TO_CLOB(i.ename) F11,                --conversione in clob
+    	NVL2(i.comm, 'Se NON nullo', 'Se nullo') F12     --verifica se nullo
+    FROM emp i
+    WHERE ENAME = 'KING';
+
+-----------------------------------
+
+    SELECT DATE'2022-11-26' CONV_INDATA, TIMESTAMP'2022-11-26 18:23:59.999' CONV_IN_TIMESTAMP  FROM DUAL;
+
+-----------------------------------
+## 4.30 [DQL - Interrogazione: WHERE e ORDER BY](430_sql_dql_where_e_order_by.md)
+
+    
+
 
 -----------------------------------
 [Torna al SOMMARIO](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/000_sommario.md)
