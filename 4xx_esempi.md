@@ -45,6 +45,28 @@
     FROM emp i
     WHERE empno = 7698;
 
+-----------------------------------
+
+    SELECT i.ename,
+    	CHR(50) F1,            --carattere corrispondente al dato codice ascii
+    	INITCAP(i.ename) F2,    --Iniziale delle parole maiuscola e resto minuscolo
+    	LOWER(i.ename) F3,        --tutto minuscolo
+    	LPAD(i.ename, 6, 'X') F4,    --riempimento (o taglio) con X a sinistra 
+    					--per arrivare a 6 byte
+    	LTRIM(i.ename) F5,        --eliminazione dei blank a sinistra
+    	REPLACE(i.ename, 'IN', 'OR') F6, --sostituzione di ogni occorrenza IN con OR
+    	RPAD(i.ename, 6, 'X') F7,    --riempimento (o taglio) con X a destra 
+    				    --per arrivare a 6 byte
+    	RTRIM(i.ename) F8,        --eliminazione dei blank a destra
+    	SUBSTR(i.ename, 2, 3) F9,    --estrazione dal carattere 2 di 3 byte
+    	SUBSTR(i.ename, -2) F10,    --estrazione di 2 caratteri dal fondo
+    	TRANSLATE(i.ename, 'KANGI', 'CORQ') F11,--sostituzione di ogni carattere con 
+    			    --il corrispondente per posizione (nullo, in assenza)
+    	TRIM(i.ename) F12,        --eliminazione dei blank a destra e sinistra
+    	UPPER(i.ename) F13        --tutto maiuscolo
+    FROM emp i
+    WHERE ename= 'KING';
+
 
 -----------------------------------
 [Torna al SOMMARIO](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/000_sommario.md)
