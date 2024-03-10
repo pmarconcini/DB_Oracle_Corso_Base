@@ -48,7 +48,7 @@
   
 4.30 [DQL - Interrogazione: WHERE e ORDER BY](430_sql_dql_where_e_order_by.md)
   
-4.40 DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate
+4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](440_sql_dql_having_group_by.md)
 
 4.50 DQL - Interrogazione: Joins
   Simple join
