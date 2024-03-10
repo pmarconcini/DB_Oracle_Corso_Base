@@ -3,7 +3,7 @@
 [Torna al SOMMARIO](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/000_sommario.md)
 
 -----------------------------------
-## Clausole WHERE e ORDER BY
+## Clausole GROUP BY e HAVING e funzioni aggregate
 
 Tramite la clausola opzionale GROUP BY è possibile aggregare record, al solito secondo il valore presente nei campi o elaborazioni dello stesso, stabilendo l’ordine logico di aggregazione. 
 In presenza di raggruppamenti nella clausola SELECT è possibile fare riferimento esclusivamente agli stessi criteri di aggregazione utilizzati nella GROUP BY e/o a eventuali valori ottenuti da funzioni aggregate. 
