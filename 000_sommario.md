@@ -40,37 +40,42 @@
 3.90 Oracle APEX Online (DA FARE)
 
 -----------------------------------
-## 4.	SQL
-DML di interrogazione (DQL)
-DML - Interrogazione: SELECT e FROM
-  Formato di visualizzazione
-DML - Interrogazione: Funzioni single-row
+## 4.	SQL - Data Query Language (DML di interrogazione)
+
+4.10 [DQL - Interrogazione: SELECT e FROM](410_sql_dql_select_from.md)
+
+4.20 DQL - Interrogazione: Funzioni single-row
   Funzioni numeriche
   Funzioni testuali
   Funzioni per le date
   Funzioni varie (comparazione, conversione e altro)
-DML - Interrogazione: WHERE e ORDER BY
+4.30 DQL - Interrogazione: WHERE e ORDER BY
   Uso delle espressioni regolari
   Clausola di limitazione delle righe
-DML - Interrogazione: GROUP BY, HAVING e funzioni aggregate
-DML - Interrogazione: Joins
+
+4.40 DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate
+
+4.50 DQL - Interrogazione: Joins
   Simple join
   Natural join
   Left o right outer join
   Self join
   Prodotto cartesiano
-DML - Interrogazione: Pseudocolonne e oggetti sistema
+
+4.60 DQL - Interrogazione: Pseudocolonne e oggetti sistema
   Descrizione degli oggetti
   Tabella fittizia DUAL
   Pseudocolonne
   Queries gerarchiche
-DML - Interrogazione: operatori SET e Subqueries
+
+4.70 DQL - Interrogazione: operatori SET e Subqueries
   Operatori SET
   Subqueries e operatori IN, ANY, SOME, EXISTS e ALL
   Inline view
   Clausola WITH
-DML - Interrogazione: Data Dictionary
-DML – Interrogazione: strumenti avanzati
+4.80 DQL - Interrogazione: Data Dictionary
+
+4.90 DQL – Interrogazione: strumenti avanzati
   Pivoting e Unpivoting
   Funzioni analitiche
   Rollup, Cube e Grouping
