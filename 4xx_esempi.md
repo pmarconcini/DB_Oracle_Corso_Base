@@ -254,8 +254,21 @@
 
     
 -----------------------------------
+## 4.50 [DQL - Interrogazione: Joins](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/450_sql_dql_joins.md)
 
+-----------------------------------
 
+    SELECT count(*) k        
+    --conta 14 record, cioè gli impiegati associati a un dipartimento
+    FROM emp i, dept d
+    WHERE i.deptno = d.deptno;
+
+-----------------------------------
+
+    SELECT COUNT(*) k        
+    --conta 14 record, cioè gli impiegati associati a un dipartimento
+    FROM dept d INNER JOIN emp i
+    ON i.deptno = d.deptno;
 
 
 
