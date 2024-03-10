@@ -1,4 +1,4 @@
-# SQL - Data Query Language (DML di interrogazione)
+# SQL - Data Query Language - ESEMPI
 
 [Torna al SOMMARIO](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/000_sommario.md)
 
@@ -26,3 +26,8 @@
     FROM emp i, dept d
     WHERE i.deptno = d.deptno AND i.job     = 'SALESMAN';
 
+
+
+
+-----------------------------------
+[Torna al SOMMARIO](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/000_sommario.md)
