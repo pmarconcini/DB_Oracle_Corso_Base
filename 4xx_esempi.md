@@ -4,7 +4,7 @@
 
 
 -----------------------------------
-## 4.10 [DQL - Interrogazione: SELECT e FROM](410_sql_dql_select_from.md)
+## 4.10 [DQL - Interrogazione: SELECT e FROM](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/410_sql_dql_select_from.md)
 
     SELECT
     	sysdate data,      /* ⇒ esposto valore non derivato dalla tabella */
@@ -28,7 +28,7 @@
 
 
 -----------------------------------
-## 4.20 [DQL - Interrogazione: Funzioni single-row](420_sql_dql_funzioni_single_row.md)
+## 4.20 [DQL - Interrogazione: Funzioni single-row](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/420_sql_dql_funzioni_single_row.md)
 
     SELECT i.sal,
         ABS(i.sal) F1,             --valore assoluto
@@ -137,7 +137,7 @@
     SELECT DATE'2022-11-26' CONV_INDATA, TIMESTAMP'2022-11-26 18:23:59.999' CONV_IN_TIMESTAMP  FROM DUAL;
 
 -----------------------------------
-## 4.30 [DQL - Interrogazione: WHERE e ORDER BY](430_sql_dql_where_e_order_by.md)
+## 4.30 [DQL - Interrogazione: WHERE e ORDER BY](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/430_sql_dql_where_e_order_by.md)
 
     SELECT i.ename, i.deptno, i.sal, i.comm, i.sal * 12 + nvl(i.comm, 0) annuo, 
     i.mgr, i.hiredate, d.loc
@@ -215,13 +215,50 @@
     
 
 -----------------------------------
-## 4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](440_sql_dql_having_group_by.md)
-
-    
-
-
+## 4.40 [DQL - Interrogazione: GROUP BY, HAVING e funzioni aggregate](https://github.com/pmarconcini/DB_Oracle_Corso_Base/blob/master/440_sql_dql_having_group_by.md)
 
 -----------------------------------
+
+    SELECT d.loc,
+    	CASE i.job WHEN 'PRESIDENT' THEN 'Capi' 
+                WHEN 'MANAGER' THEN 'Capi' ELSE 'Schiavi' END ruolo,
+    	AVG (i.sal) F1,         --media del gruppo
+    	COUNT (d.loc) F2,         --conteggio dei record con valore per gruppo
+    	COUNT (*) F3,         --conteggio dei record per gruppo
+    	COUNT (i.sal) F4,         --conteggio dei record con valore per gruppo
+    	MAX (i.sal) F5,         --massimo
+    	MIN (i.sal) F6,         --minimo
+    	SUM (i.sal) F7         --sommatoria
+    FROM emp i, dept d
+    WHERE i.deptno (+)= d.deptno 
+    --outer join per forzare l'utilizzo dei record di dept senza emp collegati
+    GROUP BY d.loc,
+    		CASE i.job WHEN 'PRESIDENT' THEN 'Capi' 
+                        WHEN 'MANAGER' THEN 'Capi' ELSE 'Schiavi' END
+    HAVING MAX (NVL(i.sal,0)) < 5000 and COUNT(i.sal) BETWEEN 0 AND 4
+    ORDER BY ruolo, AVG(i.sal) DESC, d.loc
+    
+-----------------------------------
+
+    SELECT
+        COUNT(*) F1,               --conteggio generale (record)
+        COUNT(DISTINCT d.loc) F2,  
+         --la parola chiave DISTINCT permette di ignorare i valori ripetuti 
+         -– ma non può essere utilizzata in presenza di dati di tipo CLOB
+        COUNT(d.loc) F3,           
+        --conteggio dei record con valore non nullo di un campo
+        AVG (i.sal) F4             --media generale
+    FROM emp i, dept d
+    WHERE i.deptno (+)= d.deptno --outer join per forzare l'utilizzo dei record di dept senza emp collegati
+    ;
+
+    
+-----------------------------------
+
+
+
+
+
 
 
 -----------------------------------
