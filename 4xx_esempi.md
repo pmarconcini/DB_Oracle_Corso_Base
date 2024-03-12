@@ -270,6 +270,60 @@
     FROM dept d INNER JOIN emp i
     ON i.deptno = d.deptno;
 
+-----------------------------------
+
+    SELECT COUNT(*) k                
+	    --conta 14 record, cioè gli impiegati associati a un dipartimento
+	FROM dept d NATURAL JOIN emp i;  
+	    --per la join viene automaticamente considerato l’unico campo 
+	    --presente in entrambe le tabelle: DEPTNO
+
+
+-----------------------------------
+	SELECT COUNT(*) k    
+	    --conta 15 record, cioè i 14 impiegati associati e il dipartimento vuoto
+	FROM emp i, dept d
+	WHERE i.deptno (+) = d.deptno;
+
+
+-----------------------------------
+
+	SELECT COUNT(*) k
+	--conta 15 record, cioè i 14 impiegati associati e il dipartimento vuoto
+	FROM dept d RIGHT JOIN emp i
+	ON i.deptno = d.deptno;
+
+
+-----------------------------------
+
+	SELECT COUNT(*) k
+	   --conta 15 record, cioè i 14 impiegati associati e il dipartimento vuoto
+	FROM emp d LEFT JOIN dept i
+	ON i.deptno = d.deptno;
+
+
+-----------------------------------
+
+	SELECT COUNT(*) k
+	--conta 15 record, cioè i 14 impiegati associati e il dipartimento vuoto
+	FROM dept d FULL JOIN emp i
+	ON i.deptno = d.deptno;
+
+
+-----------------------------------
+
+    SELECT i.ename NOME, i.empno MATRICOLA, i2.ename NOME_SUP, 
+	       i2.empno MATRICOLA_SUP
+	FROM emp i, emp i2
+	WHERE i.mgr = i2.empno  (+);
+
+
+-----------------------------------
+	SELECT i.ename, i.sal, s.losal, s.hisal, s.grade
+	FROM emp i, salgrade s
+	WHERE i.sal BETWEEN s.losal AND s.hisal;
+
+-----------------------------------
 
 
 
