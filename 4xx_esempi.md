@@ -319,12 +319,33 @@
 
 
 -----------------------------------
-	SELECT i.ename, i.sal, s.losal, s.hisal, s.grade
+
+ 	SELECT i.ename, i.sal, s.losal, s.hisal, s.grade
 	FROM emp i, salgrade s
 	WHERE i.sal BETWEEN s.losal AND s.hisal;
 
 -----------------------------------
 
+   	SELECT SYSDATE C1, CURRENT_TIMESTAMP C2, POWER (10, 2) C3, 10 * 10 C4, USER C5
+  	FROM DUAL;
+
+-----------------------------------
+
+ 	SELECT ROWNUM, e.ROWID, e.ename, d.ROWID, d.loc
+	FROM emp e, dept d
+	WHERE e.deptno = d.deptno
+	AND e.rowid = 'AAAR/dAAHAAAAFlAAJ';
+
+-----------------------------------
+
+
+
+
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
 
 
 
