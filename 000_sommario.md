@@ -52,17 +52,14 @@
 
 4.50 [DQL - Interrogazione: Joins](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/450_sql_dql_joins.md)
 
-4.60 DQL - Interrogazione: Pseudocolonne e oggetti sistema
-  Descrizione degli oggetti
-  Tabella fittizia DUAL
-  Pseudocolonne
-  Queries gerarchiche
+4.60 [DQL - Interrogazione: Pseudocolonne, oggetti sistema e queries gerarchiche](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/460_sql_dql_oggetti_di_sistema.md)
 
 4.70 DQL - Interrogazione: operatori SET e Subqueries
   Operatori SET
   Subqueries e operatori IN, ANY, SOME, EXISTS e ALL
   Inline view
   Clausola WITH
+  
 4.80 DQL - Interrogazione: Data Dictionary
 
 4.90 DQL – Interrogazione: strumenti avanzati
