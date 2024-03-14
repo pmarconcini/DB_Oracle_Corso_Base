@@ -300,13 +300,4 @@ connect sys/manager as sysdba
 
 GRANT ALL ON scott.prova TO scott_ro;
 
--- --------------------------------------
-connect scott_app/app
 
-insert into scott.prova values (1, 'AAA', sysdate);
-
-execute scott.pr_prova_ins (2);
-
-select * from scott.prova;
-
--- --------------------------------------
