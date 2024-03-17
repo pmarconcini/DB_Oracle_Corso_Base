@@ -375,14 +375,93 @@
 	ORDER SIBLINGS BY ename;
 
 -----------------------------------
-
-
------------------------------------
+## 4.70 [DQL - Interrogazione: operatori SET e Subqueries](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/470_sql_dql_set_e_subqueries.md)
 
 -----------------------------------
 
+	SELECT ename impiegato, empno matricola, deptno sede
+	FROM emp
+	WHERE deptno = 20
+	UNION ALL
+	SELECT ename, empno, deptno
+	FROM emp
+	WHERE ename like 'J%';
+
 -----------------------------------
 
+    SELECT empno, ename, mgr,
+      --non è necessario l'alias perchè non c'è ambiguità con le subqueries
+      (SELECT ename FROM emp WHERE empno = e.mgr) MANAGER, 
+      --nella condizione si fa riferimento all'alias della parent
+      sal - (SELECT AVG(sal) FROM emp) DELTA_SAL_MEDIO, 
+      --nessuna neccessità di legarsi alla parent
+      sal - (SELECT AVG(sal) FROM emp WHERE deptno = e.deptno) DELTA_SAL_MEDIO_SEDE 
+      --neccessità di legarsi alla parent
+    FROM emp e
+    WHERE deptno IN (SELECT deptno FROM dept WHERE loc IN ('NEW YORK', 'DALLAS'))
+    order by DELTA_SAL_MEDIO DESC;
+
+-----------------------------------
+
+	SELECT deptno, count(*) k, AVG (sal) media, 
+	       SUM(sal) somma, MAX(sal) massimo, MIN(sal) minimo
+	FROM emp x
+	WHERE EXISTS (SELECT 1 FROM emp WHERE x.deptno = deptno 
+	      AND job IN ('SALESMAN', 'ANALYST'))
+	GROUP BY deptno
+ 
+-----------------------------------
+
+	SELECT ename, job, sal
+	FROM emp e
+	WHERE sal > ALL (SELECT avg(sal)  FROM emp sq WHERE sq.job = e.job
+	                 UNION
+	                 SELECT avg(sal)  FROM emp sq WHERE sq.deptno = e.deptno
+	                 );		 
+
+-----------------------------------
+
+	SELECT ename, job, sal
+	FROM emp e
+	WHERE sal > ANY (SELECT avg(sal)  FROM emp sq WHERE sq.job = e.job
+	                 UNION
+	                 SELECT avg(sal)  FROM emp sq WHERE sq.deptno = e.deptno
+	                 );
+
+-----------------------------------
+
+	SELECT empno, ename, e.deptno, sal, media, sal - media delta_sal
+	FROM emp e, (SELECT deptno, AVG (sal) media FROM emp GROUP BY deptno) sq1
+	WHERE e.deptno = sq1.deptno
+	ORDER BY delta_sal DESC;
+
+-----------------------------------
+
+	SELECT *
+	FROM (
+	    SELECT ename, sal, rownum ordine
+    	FROM (    
+	           SELECT ename, sal
+	           FROM emp
+	           ORDER BY sal DESC
+	           ) iv
+	     ) iv_ordinata
+	WHERE ordine BETWEEN 4 and 11;   
+
+-----------------------------------
+
+	WITH dept_medie AS (
+	  SELECT deptno, AVG(sal) sal_medio
+	  FROM   emp
+	  GROUP BY deptno)
+	SELECT e.ename,       e.sal,       e.deptno,       
+	       dm.sal_medio,       dm.sal_medio - e.sal sal_diff
+	FROM   emp e,       dept_medie dm
+	WHERE  e.deptno = dm.deptno
+	ORDER BY e.ename;
+
+-----------------------------------
+-----------------------------------
 
 
 -----------------------------------
