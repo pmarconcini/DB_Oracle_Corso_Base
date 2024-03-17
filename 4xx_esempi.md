@@ -336,9 +336,45 @@
 	WHERE e.deptno = d.deptno
 	AND e.rowid = 'AAAR/dAAHAAAAFlAAJ';
 
+
+
+-----------------------------------
+## 4.60 [DQL - Interrogazione: Pseudocolonne, oggetti sistema e queries gerarchiche](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/460_sql_dql_oggetti_di_sistema.md)
+
 -----------------------------------
 
+	SELECT ROWNUM, e.ROWID, e.ename, d.ROWID, d.loc
+	FROM emp e, dept d
+	WHERE e.deptno = d.deptno
+	ORDER BY ENAME;
 
+-----------------------------------
+
+	SELECT ROWNUM, e.ROWID, e.ename, d.ROWID, d.loc
+	FROM emp e, dept d
+	WHERE e.deptno = d.deptno
+	AND e.rowid = 'AAAR/dAAHAAAAFlAAJ';
+
+-----------------------------------
+
+	SELECT ename Impiegato, empno, mgr,  CONNECT_BY_ISLEAF Foglia,
+	LEVEL, SYS_CONNECT_BY_PATH(ename, '/') "Path"
+	FROM emp
+	--WHERE LEVEL <= 5 and deptno = 10
+	START WITH empno = 7839
+	CONNECT BY PRIOR empno = mgr AND LEVEL <= 5 and deptno = 10
+	--ORDER BY LEVEL, Impiegato, Foglia;
+
+-----------------------------------
+
+	SELECT ename Impiegato, empno, mgr,  CONNECT_BY_ISLEAF Foglia,
+		LEVEL, SYS_CONNECT_BY_PATH(ename, '/') "Path"
+	FROM emp
+	START WITH mgr IS NULL
+	CONNECT BY PRIOR empno = mgr
+	ORDER SIBLINGS BY ename;
+
+-----------------------------------
 
 
 -----------------------------------
