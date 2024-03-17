@@ -54,19 +54,10 @@
 
 4.60 [DQL - Interrogazione: Pseudocolonne, oggetti sistema e queries gerarchiche](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/460_sql_dql_oggetti_di_sistema.md)
 
-4.70 DQL - Interrogazione: operatori SET e Subqueries
-  Operatori SET
-  Subqueries e operatori IN, ANY, SOME, EXISTS e ALL
-  Inline view
-  Clausola WITH
+4.70 [DQL - Interrogazione: operatori SET e Subqueries](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/470_sql_dql_set_e_subqueries.md)
   
 4.80 DQL - Interrogazione: Data Dictionary
 
-4.90 DQL – Interrogazione: strumenti avanzati
-  Pivoting e Unpivoting
-  Funzioni analitiche
-  Rollup, Cube e Grouping
-  Flashback
 
 5.	SQL – TCL, DCL e DML di manipolazione
 DML – Transazioni (TCL)
@@ -214,4 +205,14 @@ Risorse di sistema
   DBMS_STATS (DA FARE)
   OWA_UTIL
   UTL_FILE
+
+
+
+---------------------------------------
+Corso avanzato:
+4.90 DQL – Interrogazione: strumenti avanzati
+  Pivoting e Unpivoting
+  Funzioni analitiche
+  Rollup, Cube e Grouping
+  Flashback
 
