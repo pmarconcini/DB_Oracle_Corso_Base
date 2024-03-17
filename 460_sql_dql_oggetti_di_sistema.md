@@ -83,10 +83,63 @@ Output:
 
 
 -----------------------------------
-## 
+## QUERIES GERARCHICHE
+
+Una forma più evoluta di self join è quella utilizzata per definire le queries gerarchiche; in particolare è possibile stabilire sia il punto di partenza (la radice, tramite START WITH) della gerarchia che la regola di connessione tra righe (CONNECT BY). 
+Sono disponibili delle funzioni peculiari, alcune delle quali visibili nella query di esempio seguente (tra quelle non utilizzate può essere utile la funzione CONNECT_BY_ROOT /<campo> che restituisce il valore della radice per ogni riga (nel caso dell’esempio sarebbe sempre un dato della riga relativa a KING, essendoci una unica radice). 
+
+Esempio: 
+
+	SELECT ename Impiegato, empno, mgr,  CONNECT_BY_ISLEAF Foglia,
+	LEVEL, SYS_CONNECT_BY_PATH(ename, '/') "Path"
+	FROM emp
+	--WHERE LEVEL <= 5 and deptno = 10
+	START WITH empno = 7839
+	CONNECT BY PRIOR empno = mgr AND LEVEL <= 5 and deptno = 10
+	--ORDER BY LEVEL, Impiegato, Foglia;
+
+Output:
+
+![image](https://github.com/pmarconcini/DB_Oracle_Corso_Base/assets/82878995/1963b188-8296-4580-a345-20c21540a98b)
 
 
+-----------------------------------
 
+Nella clausola ORDER BY è possibile inserire la parola chiave SIBLINGS che fa sì che i criteri seguenti siano considerati a parità di livello all’interno del singolo ramo, come nell’esempio seguente:
+
+Esempio: 
+
+	SELECT ename Impiegato, empno, mgr,  CONNECT_BY_ISLEAF Foglia,
+		LEVEL, SYS_CONNECT_BY_PATH(ename, '/') "Path"
+	FROM emp
+	START WITH mgr IS NULL
+	CONNECT BY PRIOR empno = mgr
+	ORDER SIBLINGS BY ename;
+
+
+Output:
+
+IMPIEGATO  EMPNO MGR FOGLIA LEVEL      PATH
+
+KING       7839         0     1     /KING 
+
+BLAKE      7698 7839    0     2     /KING/BLAKE 
+
+ALLEN      7499 7698    1     3     /KING/BLAKE/ALLEN 
+
+JAMES      7900 7698    1     3     /KING/BLAKE/JAMES 
+
+MARTIN     7654 7698    1     3     /KING/BLAKE/MARTIN
+
+TURNER     7844 7698    1     3     /KING/BLAKE/TURNER 
+
+WARD       7521 7698    1     3     /KING/BLAKE/WARD 
+
+CLARK      7782 7839    0     2     /KING/CLARK
+
+MILLER     7934 7782    1     3     /KING/CLARK/MILLER
+
+[…]
 
 
 -----------------------------------
