@@ -461,6 +461,100 @@
 	ORDER BY e.ename;
 
 -----------------------------------
+## 4.80 [DQL - Interrogazione: Data Dictionary](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/480_sql_dql_data_dictionary.md)
+
+-----------------------------------
+
+	SELECT * FROM dict; -- ontenuto del Data Dictionary
+ 
+-----------------------------------
+
+	SELECT * FROM cat; 	--elenco di SEQUENCE/TABLE/VIEW di proprietà dell'utente (corrisponde alla vista di sistema USER_CATALOG)
+
+	SELECT * FROM USER_OBJECTS;	--Anagrafica degli oggetti (tutti i tipi)
+
+	SELECT * FROM USER_TABLES;	--Anagrafica delle tabelle
+
+	SELECT * FROM USER_CONS_COLUMNS;	--Legame Vincoli-Colonne
+
+	SELECT * FROM USER_CONSTRAINTS;	--Anagrafica dei vincoli
+
+	SELECT * FROM USER_TAB_COLS;	--Anagrafica delle colonne
+
+	SELECT * FROM USER_UNUSED_COL_TABS; --Conteggio colonne unused per tabella
+
+	SELECT * FROM USER_VIEWS;		--Anagrafica delle viste
+
+	SELECT * FROM USER_INDEXES;	--Anagrafica degli indici
+
+	SELECT * FROM USER_SYNONYMS;	--Anagrafica dei sinonimi
+
+	SELECT * FROM USER_PROCEDURES;	--Anagrafica delle procedure/funzioni/packages
+
+	SELECT * FROM USER_DB_LINKS;	--Anagrafica dei DB link
+
+	SELECT * FROM USER_TYPES;		--Anagrafica dei Type
+
+	SELECT * FROM USER_TRIGGERS;	--Anagrafica dei trigger
+
+	SELECT * FROM USER_LIBRARIES;	--Anagrafica delle librerie
+
+-----------------------------------
+
+	SELECT * FROM USER_ROLE_PRIVS;	--Ruoli associati all'utente
+
+	SELECT * FROM USER_TAB_PRIVS;   --Privilegi sulle tabelle associati all'utente
+
+	SELECT * FROM USER_COL_PRIVS;	--Privilegi su specifiche colonne
+
+	SELECT * FROM USER_RESOURCE_LIMITS; --Riepilogo dei limiti delle risorse disponibili
+
+	SELECT * FROM USER_USERS;		--Stato dell'utenza
+
+	SELECT * FROM USER_SYS_PRIVS;	--Privilegi associati all'utente
+
+	SELECT * FROM ALL_DIRECTORIES; --Directory disponibili per scrittura di files
+
+	SELECT * FROM USER_TAB_COL_STATISTICS;	--Statistiche del contenuto delle colonne
+
+	SELECT * FROM USER_ERRORS;     --Errori nel codice associati alla compilazione di oggetti
+
+	SELECT * FROM USER_SOURCE;     --Codice degli oggetti
+
+	SELECT * FROM USER_DEPENDENCIES;		--Legami di dipendenza tra oggetti
+
+	SELECT * FROM USER_JOBS;			--Cruscotto jobs
+
+	SELECT * FROM USER_TABLESPACES;		--Anagrafica dei tablespaces
+
+	SELECT * FROM USER_SNAPSHOTS;  --Anagrafica degli snapshot (viste materializzate)
+
+	SELECT * FROM USER_TAB_PARTITIONS;	--Anagrafica delle partizioni (tabelle partizionate)
+
+	SELECT * FROM USER_PART_INDEXES;		--Anagrafica delle partizioni (indici partizionati)
+
+	SELECT * FROM GLOBAL_NAME;			--Nome del db
+
+	SELECT * FROM NLS_DATABASE_PARAMETERS;	--Parametri a livello di db
+
+	SELECT * FROM NLS_INSTANCE_PARAMETERS;	--Parametri a livello di istanza
+
+	SELECT * FROM NLS_SESSION_PARAMETERS;	--Parametri di sessione
+
+	SELECT * FROM INDEX_STATS;		--Statistiche relative agli indici
+
+	SELECT * FROM RESOURCE_COST;		--Risorse in uso di sessione
+
+	SELECT * FROM ALL_SNAPSHOT_REFRESH_TIMES;	--Info relative agli snapshot
+
+	SELECT * FROM V$VERSION;			--Info sulla versione di Oracle
+
+	SELECT * FROM V$OPTION;			--Opzioni dell'istanza
+
+	SELECT * FROM V$SYSTEM_PARAMETER;         --Parametri attuali dell’istanza
+
+	SELECT * FROM V$PARAMETER;                --Parametri attuali della sessione
+
 -----------------------------------
 
 
