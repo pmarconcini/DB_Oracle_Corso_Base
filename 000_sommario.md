@@ -56,7 +56,7 @@
 
 4.70 [DQL - Interrogazione: operatori SET e Subqueries](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/470_sql_dql_set_e_subqueries.md)
   
-4.80 DQL - Interrogazione: Data Dictionary
+4.80 [DQL - Interrogazione: Data Dictionary](https://github.com/pmarconcini/DB_Oracle_Corso_Base/edit/master/480_sql_dql_data_dictionary.md)
 
 
 5.	SQL – TCL, DCL e DML di manipolazione
