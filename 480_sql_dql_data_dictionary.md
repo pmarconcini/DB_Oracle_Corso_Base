@@ -10,7 +10,7 @@ L’elenco e la descrizione delle tabelle (aggiornate in tempo reale dal RDBMS) 
 
 Segue un elenco di viste di più frequente utilizzo (il commento indica il contesto delle informazioni restituite).
 
-	SELECT * FROM dict; -- ontenuto del Data Dictionary
+	SELECT * FROM dict; -- contenuto del Data Dictionary
  
 -----------------------------------
 ### VISTE INFORMATIVE SULLE DEFINIZIONI DEGLI OGGETTI
