@@ -60,17 +60,20 @@
 
 
 5.	SQL – TCL, DCL e DML di manipolazione
-DML – Transazioni (TCL)
-  SET TRANSACTION
-DML - Manipolazione: INSERT
-DML - Manipolazione: UPDATE
-DML - Manipolazione: DELETE e TRUNCATE
-DML - Manipolazione: MERGE
-DML – Clausola LOG ERRORS
-DCL - Autorizzazioni
-  Utenti
-  Privilegi
-  Ruoli
+
+5.10 DML – Transazioni (TCL)
+
+5.20 DML - Manipolazione: INSERT
+
+5.30 DML - Manipolazione: UPDATE
+
+5.40 DML - Manipolazione: DELETE e TRUNCATE
+
+5.50 DML - Manipolazione: MERGE
+
+5.70 DCL - Autorizzazioni:   Utenti,  Privilegi,  Ruoli
+
+
 
 6.	SQL – DDL (definizione senza codice)
 DDL - Tabelle
@@ -216,3 +219,6 @@ Corso avanzato:
   Rollup, Cube e Grouping
   Flashback
 
+5.20 DML - Manipolazione: INSERT multitabella
+
+5.60 DML – Clausola LOG ERRORS
